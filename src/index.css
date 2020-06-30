@@ -209,6 +209,15 @@ header nav li:last-child {
   }
 }
 
+.tos {
+  position: relative;
+  justify-content: center;
+  min-height: 35vh;
+  color: #fff;
+  text-align: center;
+  background-color: #2196f3
+}
+
 /*--------------------
  	Our Work Section
 ---------------------*/

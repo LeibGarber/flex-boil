@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import jStay from "./imgs/JStay-Logo.png";
 import "./App.css";
 import {
   Route,
@@ -9,10 +10,9 @@ import {
   Redirect
 } from "react-router-dom";
 import Home from "./Home";
-import About from "./About";
-import Content1 from "./Content1";
-import Content2 from "./Content2";
-import Contact from "./Contact";
+import Tos from "./Tos";
+
+
 
 class App extends Component {
   render() {
@@ -21,33 +21,25 @@ class App extends Component {
         <div className="App">
           <header>
             <h2>
-              <NavLink to="/home">Website Logo</NavLink>
+              <NavLink to="/home"><img src= {jStay} alt="logo for J-Stay the letter J with a roof over it" /></NavLink>
             </h2>
             <nav>
               <li>
                 <NavLink to="/home">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/terms-of-service">Terms of Service</NavLink>
               </li>
-              <li>
-                <NavLink to="/content1">Content 1</NavLink>
-              </li>
-              <li>
-                <NavLink to="/content2">Content 2</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
+
+
             </nav>
           </header>
 
           <Switch>
             <Route exact path="/home" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/content1" component={Content1} />
-            <Route exact path="/content2" component={Content2} />
-            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/terms-of-service" component={Tos} />
+
+
             <Redirect from="/" to="/home" />
           </Switch>
 
@@ -80,12 +72,12 @@ class App extends Component {
               </li>
             </ul>
             <p>
-              Made by{" "}
-              <a href="http://tutorialzine.com/" target="_blank">
-                CapsLok
-              </a>.{" "}
+
+              <a href="www.google.com" target="_blank">
+               <logo />
+              </a>
             </p>
-            <p>Ball out on these mofos</p>
+
           </footer>
         </div>
       </Router>
